@@ -54,16 +54,7 @@ $row1 = $row2 = '<tr>';
 $rowname = 'row1';
 $even = (($size%2) == 0) ? true : false;
 for ($row = 1, $alt=0; $row <= $length; $row++) {
-
 	$$rowname .=  "<td id='".$row."' class='block".(($row+$alt)%2)."'>&nbsp;</td>";
-	if ($row == $size) {
-		$row1 .= '</tr>';
-		$rowname = 'row2';
-		if ($even)
-		$alt++;
-	}
-	$row++;
-	$$rowname .= "<td id='".$row."' class='block".(($row+$alt)%2)."'>&nbsp;</td>";
 	if ($row == $size) {
 		$row1 .= '</tr>';
 		$rowname = 'row2';
